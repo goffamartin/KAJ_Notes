@@ -1,0 +1,111 @@
+/* List of notes – karta poznámky */
+#notes-container .note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+#notes-container .note-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#notes-container .note-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+#notes-container .note-content {
+  margin-top: 0.8rem;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#notes-container .note-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.note-card h5 {
+  margin-top: 1rem;
+}
+
+/* 00000PageList-specific styles */
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.note-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.note-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+
+.note-content {
+  margin-top: 0.8rem;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+    line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty-message {
+  font-style: italic;
+  color: #666;
+}
+
+.note-img {
+  display: block;
+  max-width: 100%;
+  width: 50rem;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-top: 0.5rem;
+}
+
+.note-video {
+  border: none;
+  width: 50rem;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+}
+
+.note-audio {
+  max-width: 100%;
+  width: 50rem;
+  margin-top: 0.5rem;
+}
+

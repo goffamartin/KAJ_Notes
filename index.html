@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="./styles/page-list.css" />
+    <link rel="stylesheet" href="./styles/page-folders.css" />
+    <link rel="stylesheet" href="./styles/page-form.css" />
+    <link rel="stylesheet" href="./styles/page-detail.css" />
+
+    <script src="https://unpkg.com/localforage/dist/localforage.min.js"></script>
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <!-- Hamburger Button -->
+    <button id="hamburger" aria-label="Toggle menu">
+      <svg viewBox="0 0 100 100" width="30" height="30">
+        <rect class="bar bar1" y="20" width="100" height="10" rx="5" />
+        <rect class="bar bar2" y="50" width="100" height="10" rx="5" />
+        <rect class="bar bar3" y="80" width="100" height="10" rx="5" />
+      </svg>
+    </button>
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <!-- <li><button data-nav="list">📋 Notes</button></li> -->
+        <li>
+          <button data-nav="form">
+            <svg class="icon">
+              <use href="./assets/icons.svg#icon-add"></use>
+            </svg>
+            New Note
+          </button>
+        </li>
+        <li>
+          <button data-nav="folders">
+            <svg class="icon">
+              <use href="./assets/icons.svg#icon-folder"></use>
+            </svg>
+            Folders
+          </button>
+          <div class="sidebar-section">
+            <ul id="sidebar-folders" class="sidebar-folder-list"></ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <header>
+      <div class="header-icon">
+        <img
+          height="30"
+          width="30"
+          class="logo"
+          src="./assets/logo.svg"
+          alt="Notes logo"
+        />
+        <h1>Notes</h1>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main id="content"></main>
+
+    <footer>
+      <p>
+        © Copyright - Notes.com | site by
+        <b>GOFFA</b>
+      </p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
