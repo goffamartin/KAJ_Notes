@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes App</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/page-list.css" />
     <link rel="stylesheet" href="./styles/page-folders.css" />
     <link rel="stylesheet" href="./styles/page-form.css" />
     <link rel="stylesheet" href="./styles/page-detail.css" />
 
-    <script src="https://unpkg.com/localforage/dist/localforage.min.js"></script>
-    <script type="module" src="main.js"></script>
+    <script src="./libs/localforage.min.js"></script>
+    <script src="utils.js"></script>
   </head>
   <body>
     <!-- Hamburger Button -->
@@ -61,6 +61,7 @@
         />
         <h1>Notes</h1>
       </div>
+      
     </header>
     <!-- Main Content -->
     <main id="content"></main>
@@ -72,6 +73,6 @@
       </p>
     </footer>
 
-    <script type="module" src="main.js"></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>

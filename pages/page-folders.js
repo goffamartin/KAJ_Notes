@@ -27,7 +27,7 @@ export class PageFolders extends Page {
             <div class="folder-header">
               <a href="?page=list&folder=${encodeURIComponent(f)}" class="folder-name">
                 <svg class="icon"><use href="./assets/icons.svg#icon-folder"></use></svg>
-                ${f}
+                ${escapeHtml(f)}
               </a>
               ${f !== "Other" ? `
                 <div class="folder-actions">
@@ -63,7 +63,7 @@ export class PageFolders extends Page {
 
     form.addEventListener("submit", e => {
       e.preventDefault();
-      const folderName = form.folder.value.trim();
+      const folderName = escapeHtml(form.folder.value.trim());
       if (!folderName) return;
 
       const folders = JSON.parse(localStorage.getItem("folders")) || ["Other"];
@@ -92,7 +92,7 @@ export class PageFolders extends Page {
 
       if (e.target.closest("[data-rename]")) {
         const oldName = e.target.closest("[data-rename]").dataset.rename;
-        const newName = prompt("Insert new folder name:", oldName)?.trim();
+        const newName = escapeHtml(prompt("Insert new folder name:", oldName)?.trim());
         if (newName && newName !== oldName) {
           if (folders.includes(newName)) {
             alert("A folder with that name already exists.");

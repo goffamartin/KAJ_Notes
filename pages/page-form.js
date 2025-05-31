@@ -38,7 +38,7 @@ export class PageForm extends Page {
           <select id="folder" name="folder">${options}</select>
         </div>
         <button type="submit" class="btn note-form-submit">
-          <svg class="icon"><use href="./assets/icons.svg#icon-save"></use></svg>
+          <svg class="icon"><use href="./assets/icons.svg#icon-note"></use></svg>
           Save
         </button>
       </form>

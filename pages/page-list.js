@@ -11,7 +11,7 @@ export class PageList extends Page {
     const notes = (JSON.parse(localStorage.getItem("notes")) || []).filter(n => n.folder === folder);
 
     
-    let html = `<h2 class="page-title">${this.title} – ${folder}</h2>`;
+    let html = `<h2 class="page-title">${escapeHtml(this.title)} – ${folder}</h2>`;
 
     if (notes.length === 0) {
       html += `<p>No notes in folder <strong>${folder}</strong>.</p>`;
@@ -20,7 +20,7 @@ export class PageList extends Page {
       for (let note of notes) {
   html += `<div class="note-card" data-id="${note.id}" style="cursor:pointer;">`;
   html += `<div class="note-header">
-            <div class="note-title">${note.title || "Untitled"}</div>
+            <div class="note-title">${escapeHtml(note.title) || "Untitled"}</div>
             <div class="note-date">${new Date(note.date).toLocaleDateString("cs-CZ")}</div>
           </div>`;
 
@@ -47,7 +47,7 @@ export class PageList extends Page {
 
     if (note.text) {
       html += `<h5>Text</h5>`;
-      html += `<div class="note-content">${note.text}</div>`;
+      html += `<div class="note-content">${escapeHtml(note.text)}</div>`;
     }
     html += `</div>`;
   }

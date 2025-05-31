@@ -21,8 +21,8 @@ export class PageDetail extends Page {
     let html = `
       <h2 class="page-title">Note Detail</h2>
       <div class="card">
-        ${note.title ? `<h3>${note.title}</h3>` : ""}
-        ${note.text ? `<p style="white-space:pre-line;">${note.text}</p>` : ""}
+        ${note.title ? `<h3>${escapeHtml(note.title)}</h3>` : ""}
+        ${note.text ? `<p style="white-space:pre-line;">${escapeHtml(note.text)}</p>` : ""}
     `;
 
     // Image preview
